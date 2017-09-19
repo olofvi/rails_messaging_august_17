@@ -20,6 +20,14 @@ group :development do
   gem 'web-console', '~> 2.0'
 end
 
+group :test do
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+end
+
 group :production do
   gem 'rails_12factor'
 end
