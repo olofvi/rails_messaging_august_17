@@ -14,8 +14,8 @@ Bundler.require(*Rails.groups)
 
 module Mailboxer
   class Application < Rails::Application
-    
-    config.active_record.raise_in_transactional_callbacks = true
+
+    # config.active_record.raise_in_transactional_callbacks = true
 
 
     config.action_mailer.default_url_options = { host: 'ca-mailboxer.herokuapp.com' }
