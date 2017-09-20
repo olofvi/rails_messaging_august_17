@@ -4,9 +4,9 @@ Feature: As a user in order to use the application
     I should be able to log out
 
     Background:
-    Given the following users exists
-      | name   | email           | password | password_confirmation |
-      | sender | sender@test.com | password | password              |
+      Given the following users exists
+        | name   | email           | password | password_confirmation |
+        | sender | sender@test.com | password | password              |
 
     Scenario: Register User
       Given I'm on the "home" page

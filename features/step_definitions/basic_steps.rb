@@ -27,7 +27,7 @@ Given(/^I am a registered user$/) do
                                password_confirmation: 'password')
 end
 
-Given(/^I am on the "([^"]*)" page$/) do |page|
+And(/^I am on the "([^"]*)" page$/) do |page|
   visit root_path
 end
 
