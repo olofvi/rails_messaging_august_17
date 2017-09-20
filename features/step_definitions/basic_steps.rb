@@ -1,25 +1,13 @@
 Given(/^I'm on the "([^"]*)" page$/) do |page|
-  case page
-    when 'home'
-      visit '/'
-    when 'Sign up'
-      visit 'users/sign_up'
-  end
+  visit root_path
 end
 
 And(/^I click on "([^"]*)"$/) do |unicorn|
   click_link_or_button unicorn
 end
 
-Then(/^I should be on the "([^"]*)" page$/) do |page|
-  case page
-    when 'Sign up'
-      expect(current_path).to eq '/users/sign_up'
-    end
-end
-
-And(/^I fill in "([^"]*)" with "([^"]*)"$/) do |form, content|
-  fill_in(form, with: content)
+And(/^I fill in "([^"]*)" with "([^"]*)"$/) do |field, content|
+  fill_in(field, with: content)
 end
 
 Then(/^I should see "([^"]*)"$/) do |message|
@@ -34,5 +22,5 @@ Given(/^I am a registered user$/) do
 end
 
 Given(/^I am on the "([^"]*)" page$/) do |page|
-  visit '/'
+  visit root_path
 end
