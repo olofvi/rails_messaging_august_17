@@ -273,6 +273,7 @@ DEPENDENCIES
   jquery-rails
   mailboxer
   pg (~> 0.15)
+  pry
   pry-byebug
   rails (= 5.0.2)
   rails_12factor
