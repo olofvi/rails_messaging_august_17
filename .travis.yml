@@ -3,6 +3,7 @@ cache: bundler
 rvm:
   - 2.4.0
 script:
+  - bundle exec rake ci:tests
 deploy:
   provider: heroku
   api_key:
