@@ -69,7 +69,18 @@ Feature: As a user in order to use the application
       Then I should be on the "users" page
       And I should see "Name has already been taken"
 
-    Scenario: Login User
+    Scenario: Register user with already taken email
+      Given I'm on the "home" page
+      And I click on "Sign up"
+      And I fill in "Name" with "receiver"
+      And I fill in "Email" with "sender@test.com"
+      And I fill in "Password" with "password"
+      And I fill in "Password confirmation" with "password"
+      And I click on "Create"
+      Then I should be on the "users" page
+      And I should see "Email has already been taken"
+
+    Scenario: Login / Logout User
       Given I am a registered user
       And I am on the "home" page
       And I click on "Login"
@@ -77,3 +88,5 @@ Feature: As a user in order to use the application
       And I fill in "Password" with "password"
       And I click on "Log in"
       And I should see "Signed in successfully."
+      And I click on "Logout"
+      Then I should see "Signed out successfully"
