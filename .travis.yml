@@ -1,13 +1,14 @@
 language: ruby
 cache: bundler
 rvm:
-  - 2.4.0
+- 2.4.0
 before_script:
-  - bundle exec rake db:create --all
-  - bundle exec rake db:migrate
+- bundle exec rake db:create --all
+- bundle exec rake db:migrate
 script:
-  - bundle exec rake ci:tests
+- bundle exec rake ci:tests
 deploy:
   provider: heroku
   api_key:
-    secure: rxV7wKzgoBYieMQWQgJWN9YkGK/1dHc5wJSmAgyS/shHj1618TjNgqXX+ibuKybI+BRrW2w+MDFMkzG6jgEld2jk4ca2+NvydhJbBRQLiBMfjKZbnhssnQJqvhFhwmeanTjA4r3DsTU0oPuRyKqQ2w163s/YpAddoiJbg5AGfjyMCnrY5dMwCCBjIyApcysuxtGFjuEGPHUssxc+B7qKcXIygvW8SDDRHfm0lkKUjvRa0U7JgjvNbfrKItUwmkopMi9Dk7tKkiN2prqKefrtoYpT2u6pAmd6n+jVYG7vRWMeWyed9SUmKbniEdOdGKQ1BUgE1sU1Dv4SNVxtaB8ynu8C2cMBHwf3QsSu8rA2lfwQ3AbnsvBJYu10kWhMI4RKed4BKSwOl18goQaX5RMpF12d2VcpioqA7cWWuMjubzT01AZdJ68kFzqY06SySvq6EVgngEBHBeGYnbSeHvqfPUqTjN/uRH+or36swsjRRnpaz/bgC/ENSuhL+Jq2otDFZvxFWnZrqBq10UAzEM9gPeRhUYzOlh6fO68WoHifZ+xe0c9Oog8i4MBti8sa3hY6qD+SS5WJnkH9USSoBfJ+oKpxgyBctjndkA2Rjgt3jSZwvNKR9RpU1UpIS8dalNusI6ySIPFFyNHlRIBo32YgL32SriJdSSpwF6DArZdNcYQ=
+    secure: zdnM5NsnFaBPYRmQsenTHgSGQvILx42Xysp6hm1UiqrDMeE7+6ZZ/zGkYDSFwJ36+r/xxbGztYMelWjGGIY4P5dlKLccSPUDNA+SvZ+Y3WqdNeW0oOwezMoKLgEl+8OK14FjW4INzmuK2YK4t3LtN4EH3Zxwou8zcj8TfCDgJ7LwSbIuXkDTcYbr70f1YYmQN/lJ6xjDApIzFhITKJ7YxENwRGf82hpmfhjf7qEV0aPuHUEg4tcYsjauxSLTpvPkdSM4nL5TrNcsIDg+T/Lesi8qk+LkEH9EgAnDsdgfg/TSfCaijJFJgeNHiOOVKIZDlawTEiWGjd3pBdjqSgyVFkz6yXyibxtW5GAXtfxMVj509ujqftzRgkPrF1MKq9LI9klvJuv/kgGA3ZXPHVg5amSdYzjOz4NIEJNurNy8MwOxnjxAeD5I/DSggEWEgZ1YSIZ1mwHuTM+Da63B2k86vSSRuhdG9e5/8U3US1d55oMiFCPxc6ZmBy+IZDXJXr9UNkTvrt+JUnbP8z4E7DqsbkOR6cFoN2Xh0Z4yKj8hMmrC3QmwCgSwKFUe74D8+aofAaMpazejx89HTM8WRCjfryuPd39S6uSKZIewb6MxKEfCAlfgAV6/tv5SIYJbQ+qETb7LTb0LYtOkMb56l/tzo6RJ2sgZeOKWzIx+32WiIiU=
+  on: develop
