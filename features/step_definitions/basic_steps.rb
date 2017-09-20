@@ -1,3 +1,9 @@
+Given(/^the following users exists$/) do |table|
+  table.hashes.each do |hash|
+    User.create!(hash)
+  end
+end
+
 Given(/^I'm on the "([^"]*)" page$/) do |page|
   visit root_path
 end
@@ -15,7 +21,7 @@ Then(/^I should see "([^"]*)"$/) do |message|
 end
 
 Given(/^I am a registered user$/) do
-  @current_user = User.create!(name: 'sender',
+  @current_user = User.create(name: 'sender',
                                email: 'sender@test.com',
                                password: 'password',
                                password_confirmation: 'password')
@@ -23,4 +29,8 @@ end
 
 Given(/^I am on the "([^"]*)" page$/) do |page|
   visit root_path
+end
+
+Then(/^I should be on the "([^"]*)" page$/) do |page|
+  expect(current_path).to eq '/users'
 end
