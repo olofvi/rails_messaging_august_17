@@ -1,14 +1,17 @@
 language: ruby
 cache: bundler
 rvm:
-- 2.4.0
+  - 2.4.0
 before_script:
-- bundle exec rake db:create --all
-- bundle exec rake db:migrate
+  - bundle exec rake db:create --all
+  - bundle exec rake db:migrate
 script:
-- bundle exec rake ci:tests
+  - bundle exec rake ci:tests
 deploy:
   provider: heroku
   api_key:
-    secure: zdnM5NsnFaBPYRmQsenTHgSGQvILx42Xysp6hm1UiqrDMeE7+6ZZ/zGkYDSFwJ36+r/xxbGztYMelWjGGIY4P5dlKLccSPUDNA+SvZ+Y3WqdNeW0oOwezMoKLgEl+8OK14FjW4INzmuK2YK4t3LtN4EH3Zxwou8zcj8TfCDgJ7LwSbIuXkDTcYbr70f1YYmQN/lJ6xjDApIzFhITKJ7YxENwRGf82hpmfhjf7qEV0aPuHUEg4tcYsjauxSLTpvPkdSM4nL5TrNcsIDg+T/Lesi8qk+LkEH9EgAnDsdgfg/TSfCaijJFJgeNHiOOVKIZDlawTEiWGjd3pBdjqSgyVFkz6yXyibxtW5GAXtfxMVj509ujqftzRgkPrF1MKq9LI9klvJuv/kgGA3ZXPHVg5amSdYzjOz4NIEJNurNy8MwOxnjxAeD5I/DSggEWEgZ1YSIZ1mwHuTM+Da63B2k86vSSRuhdG9e5/8U3US1d55oMiFCPxc6ZmBy+IZDXJXr9UNkTvrt+JUnbP8z4E7DqsbkOR6cFoN2Xh0Z4yKj8hMmrC3QmwCgSwKFUe74D8+aofAaMpazejx89HTM8WRCjfryuPd39S6uSKZIewb6MxKEfCAlfgAV6/tv5SIYJbQ+qETb7LTb0LYtOkMb56l/tzo6RJ2sgZeOKWzIx+32WiIiU=
-  on: develop
+    secure: STg94s64NzHbFiuCK7OqKYw1/U2w/J2ZTTmeyvgMe3fpqtra7pVsdY9bmLrLWxz1ODSnAonXw9qyMWzuncVkd88dN/R/0fb85u1B/gCeeC2XUQc+EvJ9kN/Ylf2Pm7LHflt2fSZVaJRABehUi5bVgp52SNzdHxqnlNW0JWzCL71rl+Ms+aonA6dLOgZ8Rwum/JAFgtS7EHUSWUPwmQ523t6GWc+Lj9bHX5Xbl7b+GQb8hMIjB4uMs4HtHXvST9G1+SJ3wKPd7m4d8McmaUX1wBY5EQOq1fhh1fg2DzDbKCTmPsWmqr9mf4Tumk5FrZYNxvtiV8QOdLhJmbo1ebLnjVLILXFoDMOe2+9JhQeHlmBy+r7t0ThNTWA8GzTQiF69bbB1ylJVYgTImj5jM1RhpuUBFvUUHh+5aBHNxQY20LLTzcfKnu0Ci9M8SqqkQl19zy4utUqUjVWkto8Fxigh4J1rwTWsXPKn5dsdEYCnV+y2PmttG2CeJ0EZw77UFgsaczdldC1MBpeyP1kYipvNj+pEjJC5WsA8fP+iFRFUjzkxfcr4a4qsEHYF16RnRWkcGxK2uKfDXleaUD/X4Hao7cuhuO0V9ivhTA+cOc6Q+XRXanCJmjDLCBOUs+skmwEw6Wg0MsO6kk3YsNm1pg+KQuu6vOW4s3fJGSriQGF2duc=
+  app: railsmessagingaugust17
+  on:
+    repo: CraftAcademy/rails_messaging_august_17
+    branch: develop
