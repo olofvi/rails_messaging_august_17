@@ -36,7 +36,7 @@ Nurlan and Basil made feature test for the user management using Cucumber. The t
 * User can sign up
 * User can log in
 * User can log out
-* Sad paths for these scenarios
+* Sad paths for those scenarios
 
 ### Automated way of deploying the software
 
